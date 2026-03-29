@@ -1,0 +1,31 @@
+=== PRIVATE 5G IoT SIMULATION SUMMARY ===
+Simulation Name: Private5G_IoT_3Cells_Final
+Version: 1.0
+Cells: 3
+Devices: 60
+Time Steps: 2000
+Carrier Frequency [GHz]: 3.50
+Bandwidth per Cell [Hz]: 20000000
+Tx Power [dBm]: 33.00
+Thermal Noise [dBm]: -95.99
+
+=== KPI SUMMARY ===
+Mean RSRP [dBm]: -43.7347
+Std RSRP [dBm]: 7.7200
+Mean SINR [dB]: 12.4870
+Std SINR [dB]: 8.6369
+Mean Throughput [bps]: 3094041.5429
+Std Throughput [bps]: 9561843.7501
+Mean Latency [ms]: 95.3293
+Std Latency [ms]: 37.9986
+Mean PER: 0.324820
+Std PER: 0.306335
+
+=== ACTIVITY SUMMARY ===
+Active ratio: 0.1853
+Average cell load: 0.1853
+
+=== TRAFFIC CLASS COUNTS ===
+Class 1 rows: 62000
+Class 2 rows: 44000
+Class 3 rows: 14000
