@@ -1,0 +1,17 @@
+feature,importance
+pathloss_serving_dB,0.7834507954494822
+pathloss_neighbor2_dB,0.11514723156821878
+pathloss_neighbor1_dB,0.10097134893159061
+distance_neighbor1_m,8.294368158731177e-05
+packet_size_bytes,5.320969227786009e-05
+generated_traffic_bps,4.554859575480338e-05
+cell_load,4.4772913758649174e-05
+active_devices_total,4.458107036970577e-05
+packet_rate_pps,3.860980504571134e-05
+distance_neighbor2_m,3.466834481389925e-05
+distance_serving_m,3.34109129420074e-05
+active_devices_serving_cell,2.0687350662483795e-05
+serving_cell,1.2096558945532642e-05
+allocated_bandwidth_Hz,1.0915939647411232e-05
+traffic_class,4.784037480211305e-06
+is_active,4.395147422944302e-06

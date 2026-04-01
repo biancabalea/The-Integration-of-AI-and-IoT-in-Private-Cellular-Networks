@@ -1,0 +1,2 @@
+model,target,MAE,RMSE,R2
+LinearRegression,throughput_bps,1747679.4512324054,4595696.541257874,0.7826088941193423
