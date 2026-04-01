@@ -58,7 +58,6 @@ def clean_dataset(df: pd.DataFrame) -> pd.DataFrame:
     df = df.drop_duplicates()
 
     # Eliminare valori imposibile / neplauzibile
-    # Poti ajusta dupa nevoie
     df = df[df["PER"].between(0, 1)]
     df = df[df["cell_load"].between(0, 1)]
     df = df[df["allocated_bandwidth_Hz"] >= 0]
