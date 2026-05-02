@@ -1,0 +1,6 @@
+target,selected_model,source_file,final_file
+throughput_bps,RandomForest,models\random_forest_throughput.pkl,models\final\throughput_model.pkl
+SINR_dB,RandomForest,models\random_forest_sinr.pkl,models\final\sinr_model.pkl
+RSRP_dBm,LinearRegression,models\linear_regression_rsrp.pkl,models\final\rsrp_model.pkl
+latency_ms,RandomForest,models\random_forest_latency.pkl,models\final\latency_model.pkl
+PER,RandomForest,models\random_forest_per.pkl,models\final\per_model.pkl
