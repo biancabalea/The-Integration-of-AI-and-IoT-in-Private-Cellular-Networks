@@ -2,9 +2,6 @@ from pathlib import Path
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# =========================
-# PATHS
-# =========================
 METRICS_DIR = Path("results/metrics")
 FIGURES_DIR = Path("results/figures")
 FIGURES_DIR.mkdir(parents=True, exist_ok=True)

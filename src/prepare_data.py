@@ -2,16 +2,16 @@ from pathlib import Path
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-# =========================
+
 # PATHS
-# =========================
+
 INPUT_PATH = Path("data/processed/private_5g_iot_dataset_cleaned.csv")
 OUTPUT_DIR = Path("data/processed/ml_ready")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-# =========================
+
 # FEATURE SELECTION
-# =========================
+
 FEATURES = [
     "traffic_class",
     "serving_cell",
@@ -33,9 +33,9 @@ FEATURES = [
 
 TARGET = "throughput_bps"
 
-# =========================
+
 # MAIN
-# =========================
+
 def main():
     print("=== PREPARARE DATE PENTRU ML ===")
 

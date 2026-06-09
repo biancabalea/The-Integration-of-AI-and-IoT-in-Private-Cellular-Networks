@@ -5,9 +5,9 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 import joblib
 
-# =========================
+
 # PATHS
-# =========================
+
 DATA_DIR = Path("data/processed/ml_ready")
 MODEL_DIR = Path("models")
 RESULTS_DIR = Path("results")
@@ -18,9 +18,8 @@ RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 (RESULTS_DIR / "metrics").mkdir(parents=True, exist_ok=True)
 (RESULTS_DIR / "predictions").mkdir(parents=True, exist_ok=True)
 
-# =========================
 # LOAD DATA
-# =========================
+
 def load_data():
     X_train = pd.read_csv(DATA_DIR / "X_train.csv")
     X_test = pd.read_csv(DATA_DIR / "X_test.csv")
@@ -28,9 +27,9 @@ def load_data():
     y_test = pd.read_csv(DATA_DIR / "y_test.csv").squeeze("columns")
     return X_train, X_test, y_train, y_test
 
-# =========================
+
 # MAIN
-# =========================
+
 def main():
     print("=== LINEAR REGRESSION: THROUGHPUT PREDICTION ===")
 

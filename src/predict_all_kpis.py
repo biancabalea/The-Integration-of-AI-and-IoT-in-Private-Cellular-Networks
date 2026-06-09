@@ -2,9 +2,9 @@ from pathlib import Path
 import pandas as pd
 import joblib
 
-# =========================
+
 # PATHS
-# =========================
+
 INPUT_PATH = Path("data/processed/private_5g_iot_dataset_cleaned.csv")
 FINAL_MODELS_DIR = Path("models/final")
 OUTPUT_DIR = Path("results/predictions")
@@ -12,9 +12,9 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 OUTPUT_FILE = OUTPUT_DIR / "final_predictions.csv"
 
-# =========================
+
 # FEATURES
-# =========================
+
 FEATURES = [
     "traffic_class",
     "serving_cell",
@@ -34,9 +34,9 @@ FEATURES = [
     "allocated_bandwidth_Hz"
 ]
 
-# =========================
+
 # TARGETS
-# =========================
+
 TARGETS = {
     "throughput_bps": "throughput_model.pkl",
     "SINR_dB": "sinr_model.pkl",
@@ -45,9 +45,9 @@ TARGETS = {
     "PER": "per_model.pkl"
 }
 
-# =========================
+
 # LOAD MODELS
-# =========================
+
 def load_models():
     models = {}
     for target, model_file in TARGETS.items():
@@ -60,9 +60,9 @@ def load_models():
 
     return models
 
-# =========================
+
 # MAIN
-# =========================
+
 def main():
     print("=== PREDICTIE FINALA PENTRU TOATE KPI-URILE ===")
 

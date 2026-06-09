@@ -3,25 +3,25 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-# =========================
+
 # CONFIG
-# =========================
+
 DATA_PATH = Path("data/raw/private_5g_iot_dataset_final.csv")
 OUTPUT_DIR = Path("results/figures")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-# =========================
+
 # LOAD DATA
-# =========================
+
 def load_dataset(path: Path) -> pd.DataFrame:
     if not path.exists():
         raise FileNotFoundError(f"Fisierul nu exista: {path}")
     df = pd.read_csv(path)
     return df
 
-# =========================
+
 # BASIC INSPECTION
-# =========================
+
 def inspect_dataset(df: pd.DataFrame) -> None:
     print("\n=== PRIMELE 5 RANDURI ===")
     print(df.head())
@@ -41,16 +41,16 @@ def inspect_dataset(df: pd.DataFrame) -> None:
     print("\n=== DUPLICATE ===")
     print(df.duplicated().sum())
 
-# =========================
+
 # DESCRIPTIVE STATS
-# =========================
+
 def descriptive_statistics(df: pd.DataFrame) -> None:
     print("\n=== STATISTICI DESCRIPTIVE ===")
     print(df.describe().T)
 
-# =========================
+
 # DATA CLEANING
-# =========================
+
 def clean_dataset(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
 
@@ -66,9 +66,9 @@ def clean_dataset(df: pd.DataFrame) -> pd.DataFrame:
 
     return df
 
-# =========================
+
 # PLOTS
-# =========================
+
 def plot_histogram(series: pd.Series, title: str, xlabel: str, filename: str, bins: int = 40) -> None:
     plt.figure(figsize=(8, 5))
     plt.hist(series.dropna(), bins=bins)
@@ -111,9 +111,9 @@ def plot_correlation_matrix(df: pd.DataFrame, filename: str = "correlation_matri
     plt.savefig(OUTPUT_DIR / filename, dpi=300)
     plt.close()
 
-# =========================
+
 # TARGET ANALYSIS
-# =========================
+
 def analyze_targets(df: pd.DataFrame) -> None:
     target_cols = ["RSRP_dBm", "SINR_dB", "throughput_bps", "latency_ms", "PER"]
 
@@ -122,17 +122,17 @@ def analyze_targets(df: pd.DataFrame) -> None:
         print(f"\n--- {col} ---")
         print(df[col].describe())
 
-# =========================
+
 # SAVE CLEANED DATA
-# =========================
+
 def save_cleaned_dataset(df: pd.DataFrame, output_path: Path) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     df.to_csv(output_path, index=False)
     print(f"\nDataset curatat salvat in: {output_path}")
 
-# =========================
+
 # MAIN
-# =========================
+
 def main() -> None:
     print("=== INCEPE ANALIZA DATASETULUI ===")
 
